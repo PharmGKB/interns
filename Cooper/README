@@ -1,0 +1,14 @@
+This program scans through an entire pdf file and creates excel files of all the tables it finds.
+
+TO RUN:
+Make sure the pdf file is in the same folder as the program otherwise it will not find the file. 
+When the program is run it will ask for the name of the file (Do not include the .pdf). Type in the files name and hit enter.
+The program will create excel files for anything it thought was a table in the same folder.
+This program utilizes 2 Python Libraries camelot and PyPDF2.
+Links to their respective github pages and how to install: https://github.com/camelot-dev/camelot and https://github.com/py-pdf/PyPDF2
+
+LIMITATIONS:
+There are often false positives and it will create tables from something that wasn't a table.
+If a table doesn't extend across the entire width of the page it will make an extra column. (This is easy to fix afterword by simply deleting the column)
+When there is text that spans multiple lines but is within the same row the program will think each line is it's own row. As such this program works best
+with number data tables and not words.
